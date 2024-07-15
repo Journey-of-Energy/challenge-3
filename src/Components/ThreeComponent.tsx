@@ -1,13 +1,10 @@
-import React, { Suspense, useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import Moon from "../assets/3d/moon/Moon";
-import Mars from "../assets/3d/mars/Mars";
-import Earth from "../assets/3d/earth/Earth";
-import GLTFModel from "../assets/3d/Test";
-import { Environment, OrbitControls, Stars, useGLTF } from "@react-three/drei";
-import { Viewport } from "@react-three/fiber";
+import { Suspense, useRef } from "react";
+import { Canvas } from "@react-three/fiber";
 
-function ThreeComponent(props) {
+import GLTFModel from "../assets/3d/Test";
+import { Environment, Stars } from "@react-three/drei";
+
+function ThreeComponent(props: any) {
   const ref = useRef();
 
   const defSpeed = 0.7;

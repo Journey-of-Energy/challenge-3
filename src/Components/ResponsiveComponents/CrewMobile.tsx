@@ -66,13 +66,10 @@ function CrewMobile() {
     controls.start(event);
   };
   const [imgIndex, setImgIndex] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const onDragStart = () => {
-    setIsDragging(true);
-  };
+
+  const onDragStart = () => {};
   const TRASHOLD = 30;
   const onDragEnd = () => {
-    setIsDragging(false);
     const position = dragX.get();
 
     if (position >= TRASHOLD && imgIndex !== 0) {
@@ -102,7 +99,6 @@ function CrewMobile() {
             className="w-full flex"
             dragConstraints={{ left: 0, right: 0 }}
             animate={{ translateX: `-${imgIndex * 100}%` }}
-            onDragStart={onDragStart}
             onDragEnd={onDragEnd}
             transition={SPRING_OPTIONS}
           >

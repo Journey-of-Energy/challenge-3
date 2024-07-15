@@ -7,16 +7,14 @@ Source: https://sketchfab.com/3d-models/earth-f7a76c63ff1846afb2d606e5c8369c15
 Title: Earth
 */
 
-import React, { useRef } from "react";
-import { Icosahedron, Sphere, useGLTF } from "@react-three/drei";
+import { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 import { useFrame, useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import * as THREE from "three";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
-import { useSpring, Animated } from "react-spring/three";
 
-export default function GLTFModel(props) {
-  const positionData = [-4, 0, 0];
+export default function GLTFModel(props: any) {
   const gltf = useLoader(GLTFLoader, "/mars.gltf");
   const texture = useLoader(TextureLoader, `/textures/${props.name}.jpeg`);
 
@@ -31,10 +29,6 @@ export default function GLTFModel(props) {
 
     // ref.current.position.x += Math.cos(state.clock.elapsedTime) * 0.02;
     const currentPosition = ref.current.position;
-
-    let posX = defaultPos.defX;
-    let posY = defaultPos.defY;
-    let posZ = defaultPos.defZ;
 
     const newX =
       currentPosition.x +

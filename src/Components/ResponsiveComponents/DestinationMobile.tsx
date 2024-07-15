@@ -1,13 +1,10 @@
-import React, { useState } from "react";
-import moon from "../../assets/destination/image-moon.webp";
-import mars from "../../assets/destination/image-mars.webp";
-import europa from "../../assets/destination/image-europa.webp";
-import titan from "../../assets/destination/image-titan.webp";
+import { useState } from "react";
+
 import Data from "../../data.json";
 import MobileMenu from "../ResponsiveMenus/MobileMenu";
 import ThreeComponent from "../ThreeComponent";
 import { animated, useSpring } from "react-spring";
-const NumberAnimation = ({ n }) => {
+const NumberAnimation = ({ n }: any) => {
   Number.prototype.to = function (callback: any) {
     return callback(this);
   };

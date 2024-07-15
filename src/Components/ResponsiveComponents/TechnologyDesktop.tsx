@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Data from "../../data.json";
 import vehicle from "../../assets/technology/image-launch-vehicle-portrait.jpg";
 import spaceport from "../../assets/technology/image-spaceport-portrait.jpg";
 import capsule from "../../assets/technology/image-space-capsule-portrait.jpg";
-import { motion, useAnimate, useInView } from "framer-motion";
+import { useAnimate, useInView } from "framer-motion";
 function TechnologyDesktop() {
   const data = Data;
   const technologyData = data.technology;

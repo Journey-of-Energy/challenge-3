@@ -1,4 +1,3 @@
-import React from "react";
 import Menu from "../Components/Menu";
 import { useMediaQuery } from "react-responsive";
 import deskImage from "../assets/crew/background-crew-desktop.jpg";

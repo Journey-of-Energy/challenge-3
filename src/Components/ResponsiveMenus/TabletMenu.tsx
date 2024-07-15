@@ -1,8 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/shared/logo.svg";
 
-function TabletMenu(props) {
+function TabletMenu(props: any) {
   return (
     <div className="absolute top-0 right-0  w-full">
       <div className="flex items-center justify-between">

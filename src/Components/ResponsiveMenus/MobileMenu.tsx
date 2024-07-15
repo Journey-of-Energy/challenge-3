@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/shared/logo.svg";
 import { Twirl as Hamburger } from "hamburger-react";
 
-function MobileMenu(props) {
+function MobileMenu(props: any) {
   const [posPerc, setPosPerc] = useState(100);
   const [display, setDisplay] = useState("none");
   const styles = { transform: `translate(${posPerc}%)`, display: `${display}` };

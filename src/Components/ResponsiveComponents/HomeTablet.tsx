@@ -1,4 +1,3 @@
-import React from "react";
 import TabletMenu from "../ResponsiveMenus/TabletMenu";
 
 function HomeTablet() {

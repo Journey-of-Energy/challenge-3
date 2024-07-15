@@ -1,4 +1,3 @@
-import React from "react";
 import Menu from "../Components/Menu";
 import deskImage from "../assets/destination/background-destination-desktop.jpg";
 import tabletImage from "../assets/destination/background-destination-tablet.jpg";

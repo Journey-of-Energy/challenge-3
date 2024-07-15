@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Data from "../data.json";
 import ThreeComponent from "./ThreeComponent";
 import { useSpring, animated } from "react-spring";
-const NumberAnimation = ({ n }) => {
+const NumberAnimation = ({ n }: any) => {
   Number.prototype.to = function (callback: any) {
     return callback(this);
   };
