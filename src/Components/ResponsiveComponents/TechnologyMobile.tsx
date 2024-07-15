@@ -8,7 +8,11 @@ import { motion } from "framer-motion";
 const data = Data;
 const technologyData = data.technology;
 const images = [vehicle, spaceport, capsule];
-const TechContainer: React.FC = (props: any) => {
+interface TechContainerProps {
+  pickedTech: number;
+  index: number;
+}
+const TechContainer: React.FC<TechContainerProps> = (props: any) => {
   const index = props.index;
   const pickedTech = props.pickedTech;
   return (

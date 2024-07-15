@@ -5,18 +5,15 @@ import MobileMenu from "../ResponsiveMenus/MobileMenu";
 import ThreeComponent from "../ThreeComponent";
 import { animated, useSpring } from "react-spring";
 const NumberAnimation = ({ n }: any) => {
-  Number.prototype.to = function (callback: any) {
-    return callback(this);
-  };
-
   const { num } = useSpring({
     from: { num: 0 },
     num: n,
     delay: 100,
     config: { mass: 1, tension: 20, friction: 10 },
   });
-  const convNum = num.to((n) =>
-    Intl.NumberFormat().format(parseInt(n.toFixed(0)))
+
+  const convNum = num.to((value) =>
+    Intl.NumberFormat().format(Math.round(value))
   );
   return <animated.div>{convNum}</animated.div>;
 };
