@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import MobileMenu from "../ResponsiveMenus/MobileMenu";
 import douglas from "../../assets/crew/image-douglas-hurley.webp";
 import mark from "../../assets/crew/image-mark-shuttleworth.webp";

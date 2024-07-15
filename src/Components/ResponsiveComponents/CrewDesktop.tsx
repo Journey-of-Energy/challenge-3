@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import douglas from "../../assets/crew/image-douglas-hurley.webp";
 import mark from "../../assets/crew/image-mark-shuttleworth.webp";
 import victor from "../../assets/crew/image-victor-glover.webp";
@@ -12,7 +12,7 @@ function CrewDesktop() {
   const crewData = data.crew;
   const [pickedCrew, setPickedCrew] = useState(0);
   const [active, setActive] = useState(false);
-  const [number, setNumber] = useState(0);
+
   const [textScope, textAnimate] = useAnimate();
   const [roleScope, roleAnimate] = useAnimate();
   const [imgScope, imgAnimate] = useAnimate();
@@ -48,7 +48,7 @@ function CrewDesktop() {
       setText((prevText) =>
         prevText
           .split("")
-          .map((letter, index) => {
+          .map((_, index) => {
             if (index < iteration) {
               return inputText[index];
             }

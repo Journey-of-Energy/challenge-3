@@ -1,8 +1,7 @@
-import React from "react";
 import Logo from "../assets/shared/logo.svg";
 import { Link } from "react-router-dom";
 
-function Menu(props) {
+function Menu(props: any) {
   return (
     <div className="pt-8 ">
       <div className="flex justify-between items-center ">

@@ -1,8 +1,5 @@
-import React, { useEffect, useState } from "react";
-import moon from "../assets/destination/image-moon.webp";
-import mars from "../assets/destination/image-mars.webp";
-import europa from "../assets/destination/image-europa.webp";
-import titan from "../assets/destination/image-titan.webp";
+import { useEffect, useState } from "react";
+
 import Data from "../data.json";
 import ThreeComponent from "./ThreeComponent";
 import { useSpring, animated } from "react-spring";
@@ -28,9 +25,7 @@ function DestinationComponent() {
   const destinationData = data.destinations;
 
   const [pickedDestination, setPickedDestination] = useState(0);
-  const [posX, setPosX] = useState(-3);
-  const [posY, setPosY] = useState(-1);
-  const [posZ, setPosZ] = useState(-0.7);
+
   const defPos = {
     x: -3.7,
     y: -1,

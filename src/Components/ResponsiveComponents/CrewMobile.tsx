@@ -1,8 +1,3 @@
-import "swiper/css";
-import "swiper/css/a11y";
-
-import { A11y } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 import anna from "../../assets/crew/image-anousheh-ansari.webp";
 import douglas from "../../assets/crew/image-douglas-hurley.webp";
 import mark from "../../assets/crew/image-mark-shuttleworth.webp";
@@ -47,7 +42,7 @@ const ImageList: React.FC<{ imgIndex: number }> = ({
 }) => {
   return (
     <>
-      {images.map((img, index) => {
+      {images.map((_, index) => {
         return (
           <motion.div
             key={index}
