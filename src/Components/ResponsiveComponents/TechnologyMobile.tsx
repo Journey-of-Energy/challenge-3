@@ -37,7 +37,11 @@ const TechContainer: React.FC = (props: any) => {
     </div>
   );
 };
-const ImgAnimation: React.FC = (props: any) => {
+
+interface ImgAnimationProps {
+  pickedTech: number;
+}
+const ImgAnimation: React.FC<ImgAnimationProps> = (props: any) => {
   const pickedTech = props.pickedTech;
   return (
     <>

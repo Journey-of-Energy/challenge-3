@@ -18,13 +18,8 @@ export default function GLTFModel(props: any) {
   const gltf = useLoader(GLTFLoader, "/mars.gltf");
   const texture = useLoader(TextureLoader, `/textures/${props.name}.jpeg`);
 
-  const defaultPos = {
-    defX: -3,
-    defY: -1,
-    defZ: -0.7,
-  };
   const ref = useRef();
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     ref.current.rotation.y += delta * props.speed;
 
     // ref.current.position.x += Math.cos(state.clock.elapsedTime) * 0.02;
@@ -42,7 +37,7 @@ export default function GLTFModel(props: any) {
   });
 
   const sphere = new THREE.IcosahedronGeometry(1, 12);
-  const marsGeometry = gltf.nodes.Mercury_1.geometry;
+
   return (
     <>
       <mesh

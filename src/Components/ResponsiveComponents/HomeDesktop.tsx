@@ -2,7 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useTypewriter } from "use-typewriter-hook";
 
-const TypeWriter: React.FC = (props: any) => {
+interface TypeWriterProps {
+  text: string;
+  delay: number;
+}
+const TypeWriter: React.FC<TypeWriterProps> = (props) => {
   const targetText = props.text;
 
   const { textValue: typedText } = useTypewriter({

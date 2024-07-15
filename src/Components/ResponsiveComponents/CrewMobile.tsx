@@ -17,7 +17,10 @@ const SPRING_OPTIONS = {
   damping: 50,
   duration: 0.4,
 };
-const ImageContainer: React.FC = (props: any) => {
+interface ImageCointainerProps {
+  index: number;
+}
+const ImageContainer: React.FC<ImageCointainerProps> = (props) => {
   return (
     <div className="w-full flex flex-shrink-0 flex-col items-center ">
       <img
@@ -53,7 +56,7 @@ const ImageList: React.FC<{ imgIndex: number }> = ({
             transition={SPRING_OPTIONS}
             className="w-full flex shrink-0"
           >
-            <ImageContainer index={index} />
+            <ImageContainer key={index} index={index} />
           </motion.div>
         );
       })}
@@ -67,7 +70,6 @@ function CrewMobile() {
   };
   const [imgIndex, setImgIndex] = useState(0);
 
-  const onDragStart = () => {};
   const TRASHOLD = 30;
   const onDragEnd = () => {
     const position = dragX.get();
