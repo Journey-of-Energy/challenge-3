@@ -24,7 +24,6 @@ Users should be able to:
 ### Screenshot
 
 ![](./screens/main_screen.png)
-![](./screens/destination_screen.png)
 
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
