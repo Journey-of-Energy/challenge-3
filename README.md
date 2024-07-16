@@ -25,7 +25,7 @@ Users should be able to:
 
 ![](./screens/main_screen.png)
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://main--energycode-space-tourism.netlify.app)
 
 ## My process
 
