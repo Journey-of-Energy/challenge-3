@@ -23,9 +23,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screens/main_screen.png)
+![./screens/main_screen.png](./screens/main_screen.png)
 
-- Live Site URL: [Add live site URL here](https://main--energycode-space-tourism.netlify.app)
+- Live Site URL: [SPACE TOURISM](https://main--energycode-space-tourism.netlify.app)
 
 ## My process
 
