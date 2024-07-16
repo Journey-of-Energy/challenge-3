@@ -10,30 +10,33 @@ Title: Earth
 import { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame, useLoader } from "@react-three/fiber";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+
 import * as THREE from "three";
-import { TextureLoader } from "three/src/loaders/TextureLoader";
+import { TextureLoader } from "three";
 
 export default function GLTFModel(props: any) {
-  const gltf = useLoader(GLTFLoader, "/mars.gltf");
   const texture = useLoader(TextureLoader, `/textures/${props.name}.jpeg`);
 
-  const ref = useRef();
+  const ref = useRef<THREE.Mesh>();
   useFrame((_, delta) => {
-    ref.current.rotation.y += delta * props.speed;
+    if (ref.current) {
+      ref.current.rotation.y += delta * props.speed;
 
-    // ref.current.position.x += Math.cos(state.clock.elapsedTime) * 0.02;
-    const currentPosition = ref.current.position;
+      // ref.current.position.x += Math.cos(state.clock.elapsedTime) * 0.02;
+      const currentPosition = ref.current.position;
 
-    const newX =
-      currentPosition.x +
-      (props.posX - currentPosition.x) * Math.cos(132) * 0.02;
-    const newY =
-      currentPosition.y + (props.posY - currentPosition.y) * Math.cos(1) * 0.02;
-    const newZ =
-      currentPosition.z + (props.posZ - currentPosition.z) * Math.cos(1) * 0.02;
+      const newX =
+        currentPosition.x +
+        (props.posX - currentPosition.x) * Math.cos(132) * 0.02;
+      const newY =
+        currentPosition.y +
+        (props.posY - currentPosition.y) * Math.cos(1) * 0.02;
+      const newZ =
+        currentPosition.z +
+        (props.posZ - currentPosition.z) * Math.cos(1) * 0.02;
 
-    ref.current.position.set(newX, newY, newZ);
+      ref.current.position.set(newX, newY, newZ);
+    }
   });
 
   const sphere = new THREE.IcosahedronGeometry(1, 12);
