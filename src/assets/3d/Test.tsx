@@ -17,7 +17,7 @@ import { TextureLoader } from "three";
 export default function GLTFModel(props: any) {
   const texture = useLoader(TextureLoader, `/textures/${props.name}.jpeg`);
 
-  const ref = useRef<THREE.Mesh>();
+  const ref = useRef<THREE.Mesh>(null!);
   useFrame((_, delta) => {
     if (ref.current) {
       ref.current.rotation.y += delta * props.speed;

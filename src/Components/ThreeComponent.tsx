@@ -3,9 +3,10 @@ import { Canvas } from "@react-three/fiber";
 
 import GLTFModel from "../assets/3d/Test";
 import { Environment, Stars } from "@react-three/drei";
+import * as THREE from "three";
 
 function ThreeComponent(props: any) {
-  const ref = useRef();
+  const ref = useRef<THREE.DirectionalLight>(null!);
 
   const defSpeed = 0.7;
   return (
