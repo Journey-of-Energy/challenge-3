@@ -24,7 +24,7 @@ Users should be able to:
 ### Screenshot
 
 ![./Screens/main_screen.png](./Screens/main_screen.png)
-![./Screens/destination_screen.png](./Screens/main_screen.png)
+![./Screens/destination_screen.png](./Screens/destination_screen.png)
 
 - Live Site URL: [SPACE TOURISM](https://main--energycode-space-tourism.netlify.app)
 
